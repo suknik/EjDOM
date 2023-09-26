@@ -44,17 +44,20 @@ createUser(user);
 
 const inputName = document.querySelector('#name');
 const userName = document.querySelector('#username');
+console.log(userName)
 
-// inputName.addEventListener('input', e => {
-//     console.log(inputName.value);
-//     userName.textContent = e.target.value;
-// });
+inputName.addEventListener('input', e => {
+    console.log(inputName.value);
+    userName.textContent = e.target.value;
+});
 
 const nameBtn = document.querySelector('#nameBtn');
 
 nameBtn.addEventListener('click', () => {
     userName.textContent = inputName.value;
 })
+
+
 
 
 
@@ -83,7 +86,7 @@ const users = [
     }
 ]
 
-const CARD_SECTION = document.querySelector('#profiles');
+
 
 ////////////////////////////////////////
 // - Obtener la info
@@ -93,6 +96,8 @@ const CARD_SECTION = document.querySelector('#profiles');
 // - "" "" para age
 // - "" "" para lista de bandas --> iterar por cada banda
 ////////////////////////////////////////
+
+const CARD_SECTION = document.querySelector('#profiles');
 
 const createCard = () => {
     const card = document.createElement('div');
